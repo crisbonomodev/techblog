@@ -1,0 +1,206 @@
+/*------------------------Variables--------------------------*/
+:root {
+    --aquamarine-color: #3FC7A4;
+    --gray-color: #e6e9ed;
+    }
+    /*-----------------------------------------------------------*/
+    
+    html,body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto Mono', monospace;
+    }
+    
+
+    
+    /*----------------------------Header---------------------*/
+    .header {
+        
+        width: 100%;
+        top: 0;
+    }
+    
+    .social-network-links {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: auto;
+        background-color: var(--aquamarine-color);
+    }
+    
+    
+    .social-network-links ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0 30px;
+        
+    }
+    
+    .social-network-links ul li {
+        list-style: none;
+        padding: 0 10px;
+    }
+    
+    .social-network-links img {
+    
+        height: 32px;
+        width: auto;
+        filter: invert();
+    }
+    
+    .navbar-container {
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--gray-color);
+        padding: 0 5%;
+        margin: 0;   
+    }
+    
+    .navbar-container img {
+        height: 80px;
+        width: auto;
+    }
+    
+    .navbar-container a {
+        color: black;
+        font-size: 20px;
+    }
+/*----------------------------------------Hero-----------------------------------------------------*/
+
+
+
+.hero-grid {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:"h3 . ." 
+                        "img img hero-info"
+                        "img img hero-info"
+                        "img img hero-info";
+    gap: 10px;
+    background-color: #ccd1d9;
+    font-size: 15px;
+    justify-content: start;
+
+}
+
+.h3 {
+    grid-area: h3;
+}
+
+.hero-img-container {
+    grid-area: img;
+}
+
+.hero-img {
+   width: 100%;
+}
+
+.hero-info {
+    grid-area: hero-info;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.hero-info h1 {
+    font-size: 2em;
+}
+
+.button {
+
+    border: 1px solid var(--aquamarine-color);
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+}
+/*----------------------------------------------Grilla de articulos---------------------------------------*/
+
+
+.articles-title {
+    text-align: center;
+}
+
+.articles-grid {
+    border-top: 1px solid gray;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.articles-grid img {
+    width: 100%;
+}
+
+.articles-grid a {
+    border: 1px solid var(--aquamarine-color);
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+
+    /*-----------------------------------Footer---------------------------------------------*/
+
+    footer {
+        position: absolute;
+        background-color: #434a54;
+        color: white;
+        width: 100%;
+        text-align: center;
+        border-top: 20px solid var(--aquamarine-color);
+        
+    }
+
+    /*---------------------------Responsive-----------------------------------------*/
+
+
+    @media screen and (min-width:1441px) {
+        .hero-grid {
+            font-size: 30px;
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        
+        .hero-grid {
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        .article {
+            
+            padding-bottom: 20px;
+        }
+
+        .articles-grid {
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px 10px;
+        }
+
+        .articles-grid a {
+           padding: 5px;
+        }
+    }
+
+    @media screen and (max-width:320px) {
+
+        .navbar-container {
+            display: block;
+            text-align: center;
+        }
+
+        .articles-grid {
+            display: block;
+        }
+
+        .article {
+            display: block;
+            padding-bottom: 20px;
+        }
+    }
